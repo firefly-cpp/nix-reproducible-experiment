@@ -43,7 +43,7 @@ let
         python310Packages.niapy
       ];
       shellHook = "
-      cd result/bin
+      cd res*/bin
       ./run.sh";
     };
 

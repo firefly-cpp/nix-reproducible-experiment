@@ -15,6 +15,16 @@ Please follow the official [instructions](https://nixos.org/download.html). The 
 
 ### Benefits for data science experiments
 
+#### Reproducibility
+
+The reproducibility of computational experiments is a cornerstone for the fast advancement of scientific disciplines. Although depositing source code along with the paper
+was not usual in history, it is becoming more common thanks to the several tools that allow easier packaging of experiment pipelines.
+
+#### Nix vs. containers
+
+According to the [3], containers statically bundle dependencies but do not provide mechanisms to update, rebuild and maintain the contents of a container. Additionally, the Nix environment provides also a nixpkgs package collection consisting of 80000+ packages that can be available in the form of Nix expressions and as binaries. It is worth mentioning that most of the Python packages used in the Python data science pipelines are
+already available in nixpkgs.
+
 ## Outline of simple experiment
 
 ### Motivation
@@ -37,13 +47,19 @@ Run the image using the following:
 $ nix-shell default.nix -A experiment
 ```
 
-## Further reading
+## References and further reading
 
 [1] Nix for reproducibility of scientific experiments. [https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html)
 
 [2] Kowalewski, Markus, and Phillip Seeber. "Sustainable packaging of quantum chemistry software with the Nix package manager." International Journal of Quantum Chemistry 122.9 (2022): e26872.
 
 [3] Sandve, Geir Kjetil, et al. "Ten simple rules for reproducible computational research." PLoS computational biology 9.10 (2013): e1003285.
+
+## Similar solutions
+
+[1] A basic container image for performing data science reproducibility studies based on Alpine Linux, [https://github.com/firefly-cpp/alpine-container-data-science](https://github.com/firefly-cpp/alpine-container-data-science)
+
+[2] A basic container image for performing data science reproducibility studies based on Fedora Linux, [https://github.com/firefly-cpp/fedora-container-data-science](https://github.com/firefly-cpp/fedora-container-data-science)
 
 ## Disclaimer
 

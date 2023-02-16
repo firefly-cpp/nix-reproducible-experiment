@@ -29,9 +29,21 @@ already available in nixpkgs.
 
 ### Motivation
 
-Let's consider a simple Python script that utilizes some popular Python libraries for running an experiment.
+Let's consider simple Python scripts that utilize the implementation of nature-inspired algorithms in a Python library called NiaPy for running an experiment.
 
-TODO
+The code of experiments is available in a separate repository: [CLICK](https://gitlab.com/firefly-cpp/nia-test-experiments)
+
+The directory structure is as follows:
+
+    .
+    ├── ...
+    ├── src                     # two main Python files
+    │   ├── niapy_custom_problem.py
+    │   ├── niapy_pso.py
+    ├── README.md
+    ├── run.sh                  # simple shell script that runs python files
+    ├── setup.py                # basic setup file
+    └── ...
 
 ## Build & run
 

@@ -63,9 +63,9 @@ $ nix-shell default.nix -A experiment
 
 [1] Nix for reproducibility of scientific experiments. [https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html)
 
-[2] Kowalewski, Markus, and Phillip Seeber. "Sustainable packaging of quantum chemistry software with the Nix package manager." International Journal of Quantum Chemistry 122.9 (2022): e26872.
+[2] Kowalewski, Markus, and Phillip Seeber. "[Sustainable packaging of quantum chemistry software with the Nix package manager](https://onlinelibrary.wiley.com/doi/full/10.1002/qua.26872)." International Journal of Quantum Chemistry 122.9 (2022): e26872.
 
-[3] Sandve, Geir Kjetil, et al. "Ten simple rules for reproducible computational research." PLoS computational biology 9.10 (2013): e1003285.
+[3] Sandve, Geir Kjetil, et al. "[Ten simple rules for reproducible computational research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)." PLoS computational biology 9.10 (2013): e1003285.
 
 ## Similar solutions
 

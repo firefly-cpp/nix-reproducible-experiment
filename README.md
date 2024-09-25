@@ -1,19 +1,28 @@
-# A basic reproducible data science experiment based on a Nix environment
+<h1 align="center">
+    Nix
+</h1>
 
-## About
+<p align="center">
+    <a href="#-what-is-nix">🔍 What is Nix?</a> •
+    <a href="#-installation">📦 Installation</a> •
+    <a href="#-benefits-for-data-science-experiments">📈 Benefits for data science experiments</a> •
+    <a href="#-outline-of-a-simple-experiment">🧪 Outline of a simple experiment</a> •
+    <a href="#-references-and-further-reading">📚 References and further reading</a> •
+    <a href="#-similar-solutions">🔗 Similar solutions</a> •
+    <a href="#-license">🔑 License</a>
+</p>
+
 The repository is devoted to a sample data science experiment based on a Nix environment.
 
-## Nix
-
-### What is Nix?
+## 🔍 What is Nix?
 
 Nix is considered a package manager working on all popular platforms. Domain-specific Nix expression language, which is pure, lazy, and functional, defines the Nix package. Nix expressions can be viewed as functions that describe the build process. Installed packages via the Nix package manager are installed into unique directories that are immutable and cannot be changed after a build is completed.
 
-### How to install Nix?
+## 📦 Installation
 
 Please follow the official [instructions](https://nixos.org/download.html). The entire installation process takes only a few minutes.
 
-### Benefits for data science experiments
+### 📈 Benefits for data science experiments
 
 #### Reproducibility
 
@@ -25,7 +34,7 @@ was not usual in history, it is becoming more common thanks to the several tools
 According to the [2], containers statically bundle dependencies but do not provide mechanisms to update, rebuild and maintain the contents of a container. Additionally, the Nix environment provides also a nixpkgs package collection consisting of 80000+ packages that can be available in the form of Nix expressions and as binaries. It is worth mentioning that most of the Python packages used in the Python data science pipelines are
 already available in nixpkgs.
 
-## Outline of simple experiment
+## 🧪 Outline of a simple experiment
 
 ### Motivation
 
@@ -45,7 +54,7 @@ The directory structure is as follows:
     ├── setup.py                # basic setup file
     └── ...
 
-## Build & run
+### Build & run
 
 The experiment can be built using the following command:
 
@@ -59,7 +68,7 @@ Run the image using the following:
 $ nix-shell default.nix -A experiment
 ```
 
-## References and further reading
+## 📚 References and further reading
 
 [1] Nix for reproducibility of scientific experiments. [https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html](https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/index.html)
 
@@ -67,7 +76,7 @@ $ nix-shell default.nix -A experiment
 
 [3] Sandve, Geir Kjetil, et al. "[Ten simple rules for reproducible computational research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)." PLoS computational biology 9.10 (2013): e1003285.
 
-## Similar solutions
+## 🔗 Similar solutions
 
 [1a] A basic container image for performing data science reproducibility studies based on Alpine Linux, [https://github.com/firefly-cpp/alpine-container-data-science](https://github.com/firefly-cpp/alpine-container-data-science)
 
@@ -77,7 +86,8 @@ $ nix-shell default.nix -A experiment
 
 This software is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
 
-## License
+## 🔑 License
+
 Material in this folder is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 

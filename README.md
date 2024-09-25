@@ -56,13 +56,13 @@ The directory structure is as follows:
 
 ### Build & run
 
-The experiment can be built using the following command:
+The experiment derivation can be built using the following command:
 
 ```sh
-$ nix-build
+$ nix-build -A nia-experiment
 ```
 
-Run the image using the following:
+To enter the experiment environment and run it:
 
 ```sh
 $ nix-shell default.nix -A experiment

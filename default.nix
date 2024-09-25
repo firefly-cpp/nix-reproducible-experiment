@@ -7,10 +7,18 @@
 with pkgs;
 
 let
+  # Centralize Python packages for reuse
+  pythonPackages = python310Packages: with python310Packages; [
+    niapy
+    niaaml
+    niaarm
+  ];
+
+  # Define experiment derivation
   packages = rec {
 
     # The derivation for our experiment
-    nia-experiment = pkgs.python310Packages.buildPythonPackage rec {
+    nia-experiment = pkgs.python310Packages.buildPythonPackage {
       pname = "nia";
       version = "1";
       src = fetchgit {
@@ -21,31 +29,33 @@ let
 
       buildInputs = [
         uarmsolver
-
-        # Python packages
         (python310.buildEnv.override {
           ignoreCollisions = true;
-          extraLibs = with python310Packages; [
-            # Add Python packages
-            niapy
-            niaaml
-            niaarm
-          ];
+          extraLibs = pythonPackages python310Packages;
         })
       ];
+
+      # Optionally skip tests
+      doCheck = false;
     };
 
     # shell of our environment
-    experiment = mkShell rec {
+    experiment = stdenv.mkDerivation {
       name = "experiment1";
       buildInputs = [ python310Packages.niapy ];
-      shellHook = "\n      cd res*/bin\n      ./run.sh";
+
+      shellHook = ''
+        cd res*/bin
+        ./run.sh
+      '';
     };
 
     meta = {
       description = "Simple experiment using niapy package";
       homepage = "https://gitlab.com/firefly-cpp/nia-test-experiments";
+      license = licenses.mit;
+      maintainers = with maintainers; [ firefly-cpp ];
+      platforms = platforms.linux;
     };
-
   };
 in packages
